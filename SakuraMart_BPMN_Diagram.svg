@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980" font-family="Calibri, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrow-red" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#C0392B"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1E8449"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#00000033"/>
+    </filter>
+  </defs>
+
+  <!-- ══ BACKGROUND ══ -->
+  <rect width="1400" height="980" fill="#FAFAFA" rx="12"/>
+  <rect x="0" y="0" width="1400" height="60" fill="#8B0000" rx="12"/>
+  <rect x="0" y="48" width="1400" height="12" fill="#8B0000"/>
+
+  <!-- TITLE -->
+  <text x="700" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="white">🌸  SakuraMart DLP — BPMN 2.0 Process Diagram   |   As-Is vs To-Be Loyalty &amp; Payment Workflow</text>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       AS-IS (CURRENT STATE) — Top Half
+  ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- AS-IS Header Banner -->
+  <rect x="20" y="75" width="1360" height="36" fill="#C0392B" rx="6"/>
+  <text x="700" y="98" text-anchor="middle" font-size="15" font-weight="bold" fill="white">❌  AS-IS (Current State) — Paper Stamp Card Process</text>
+
+  <!-- SWIMLANE LABELS -->
+  <rect x="20" y="111" width="120" height="350" fill="#F9EBEA" rx="6" stroke="#C0392B" stroke-width="1.5"/>
+  <text transform="translate(80,290) rotate(-90)" text-anchor="middle" font-size="13" font-weight="bold" fill="#8B0000">CUSTOMER</text>
+
+  <rect x="20" y="461" width="120" height="120" fill="#EBF5FB" rx="6" stroke="#1A5276" stroke-width="1.5"/>
+  <text transform="translate(80,525) rotate(-90)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1A5276">CASHIER</text>
+
+  <rect x="20" y="581" width="120" height="90" fill="#EAFAF1" rx="6" stroke="#1E8449" stroke-width="1.5"/>
+  <text transform="translate(80,630) rotate(-90)" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">POS SYSTEM</text>
+
+  <!-- Swimlane lines -->
+  <line x1="140" y1="111" x2="1380" y2="111" stroke="#DDD" stroke-width="1"/>
+  <line x1="140" y1="461" x2="1380" y2="461" stroke="#DDD" stroke-width="1"/>
+  <line x1="140" y1="581" x2="1380" y2="581" stroke="#DDD" stroke-width="1"/>
+  <line x1="140" y1="671" x2="1380" y2="671" stroke="#DDD" stroke-width="1"/>
+  <rect x="140" y="111" width="1240" height="560" fill="none" stroke="#CCC" stroke-width="1.5" rx="4"/>
+
+  <!-- ── AS-IS NODES ── -->
+  <!-- Start Event -->
+  <circle cx="195" cy="290" r="22" fill="#C0392B" stroke="white" stroke-width="3" filter="url(#shadow)"/>
+  <text x="195" y="295" text-anchor="middle" font-size="13" fill="white" font-weight="bold">▶</text>
+  <text x="195" y="325" text-anchor="middle" font-size="11" fill="#555">Customer</text>
+  <text x="195" y="338" text-anchor="middle" font-size="11" fill="#555">Enters Store</text>
+
+  <!-- Task 1: Select Products -->
+  <rect x="255" y="265" width="130" height="52" rx="8" fill="white" stroke="#C0392B" stroke-width="2" filter="url(#shadow)"/>
+  <text x="320" y="287" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A1A2E">Select</text>
+  <text x="320" y="302" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A1A2E">Products</text>
+  <text x="320" y="317" text-anchor="middle" font-size="10" fill="#777">No personalisation</text>
+
+  <!-- Task 2: Checkout -->
+  <rect x="430" y="265" width="130" height="52" rx="8" fill="white" stroke="#C0392B" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="290" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A1A2E">Proceeds to</text>
+  <text x="495" y="305" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A1A2E">Checkout</text>
+
+  <!-- Task 3: Cashier asks about card (cashier lane) -->
+  <rect x="430" y="475" width="130" height="62" rx="8" fill="white" stroke="#1A5276" stroke-width="2" filter="url(#shadow)"/>
+  <text x="495" y="498" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A5276">Ask: Have</text>
+  <text x="495" y="513" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A5276">Stamp Card?</text>
+  <text x="495" y="528" text-anchor="middle" font-size="10" fill="#C0392B">45s delay</text>
+
+  <!-- Gateway: Has card? -->
+  <polygon points="635,291 665,265 695,291 665,317" fill="#FEF9E7" stroke="#D4AC0D" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="665" y="296" text-anchor="middle" font-size="11" font-weight="bold" fill="#B7950B">Has</text>
+  <text x="665" y="308" text-anchor="middle" font-size="11" font-weight="bold" fill="#B7950B">Card?</text>
+
+  <!-- Yes path -->
+  <text x="738" y="278" font-size="11" fill="#1E8449" font-weight="bold">YES</text>
+
+  <!-- Task: Manual Stamp -->
+  <rect x="755" y="475" width="130" height="62" rx="8" fill="white" stroke="#1A5276" stroke-width="2" filter="url(#shadow)"/>
+  <text x="820" y="498" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A5276">Manual</text>
+  <text x="820" y="513" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A5276">Stamp Card</text>
+  <text x="820" y="528" text-anchor="middle" font-size="10" fill="#C0392B">No ID check</text>
+
+  <!-- No path label -->
+  <text x="668" y="342" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="bold">NO (61%)</text>
+
+  <!-- Task: New card / skip -->
+  <rect x="605" y="180" width="130" height="52" rx="8" fill="#FADBD8" stroke="#C0392B" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#C0392B">New Card</text>
+  <text x="670" y="215" text-anchor="middle" font-size="12" font-weight="bold" fill="#C0392B">Issued / Skip</text>
+  <text x="670" y="230" text-anchor="middle" font-size="10" fill="#777">Lost data!</text>
+
+  <!-- Cash Payment (POS lane) -->
+  <rect x="930" y="592" width="130" height="50" rx="8" fill="white" stroke="#1E8449" stroke-width="2" filter="url(#shadow)"/>
+  <text x="995" y="612" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">Cash / Card</text>
+  <text x="995" y="627" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">Payment</text>
+
+  <!-- Receipt -->
+  <rect x="1100" y="592" width="130" height="50" rx="8" fill="white" stroke="#1E8449" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1165" y="612" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">Receipt</text>
+  <text x="1165" y="627" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">Issued</text>
+
+  <!-- End: Customer Leaves — no data -->
+  <circle cx="1310" cy="290" r="22" fill="white" stroke="#C0392B" stroke-width="4" filter="url(#shadow)"/>
+  <circle cx="1310" cy="290" r="14" fill="#C0392B"/>
+  <text x="1310" y="325" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="bold">Customer</text>
+  <text x="1310" y="338" text-anchor="middle" font-size="11" fill="#C0392B" font-weight="bold">Leaves</text>
+  <text x="1310" y="352" text-anchor="middle" font-size="10" fill="#777">Zero data</text>
+
+  <!-- Pain point callouts -->
+  <rect x="1110" y="200" width="160" height="72" rx="8" fill="#FADBD8" stroke="#C0392B" stroke-width="1.5"/>
+  <text x="1120" y="222" font-size="11" fill="#C0392B" font-weight="bold">⚠ Key Pain Points:</text>
+  <text x="1120" y="238" font-size="10" fill="#555">• 61% lose stamp cards</text>
+  <text x="1120" y="252" font-size="10" fill="#555">• Zero customer data</text>
+  <text x="1120" y="266" font-size="10" fill="#555">• 45s delay per customer</text>
+
+  <!-- ── AS-IS ARROWS ── -->
+  <line x1="217" y1="290" x2="255" y2="290" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="385" y1="291" x2="430" y2="291" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- down to cashier lane -->
+  <line x1="495" y1="317" x2="495" y2="461" stroke="#555" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <!-- cashier to gateway (up) -->
+  <line x1="560" y1="506" x2="635" y2="291" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- gateway YES to stamp -->
+  <line x1="695" y1="291" x2="820" y2="291" stroke="#555" stroke-width="1.5"/>
+  <line x1="820" y1="291" x2="820" y2="461" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- gateway NO up -->
+  <line x1="665" y1="265" x2="665" y2="232" stroke="#C0392B" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <!-- stamp to payment -->
+  <line x1="885" y1="506" x2="995" y2="580" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <!-- payment to receipt -->
+  <line x1="1060" y1="617" x2="1100" y2="617" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- receipt to end -->
+  <line x1="1230" y1="617" x2="1310" y2="617" stroke="#555" stroke-width="1.5"/>
+  <line x1="1310" y1="617" x2="1310" y2="312" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       TO-BE (FUTURE STATE) — Bottom Half
+  ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- TO-BE Header Banner -->
+  <rect x="20" y="685" width="1360" height="36" fill="#1E8449" rx="6"/>
+  <text x="700" y="708" text-anchor="middle" font-size="15" font-weight="bold" fill="white">✅  TO-BE (Future State) — SakuraMart Digital Loyalty Platform (DLP)</text>
+
+  <!-- SWIMLANE LABELS -->
+  <rect x="20" y="721" width="120" height="240" fill="#F9FBE7" rx="6" stroke="#1E8449" stroke-width="1.5"/>
+  <text transform="translate(80,845) rotate(-90)" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E8449">CUSTOMER</text>
+
+  <rect x="140" y="721" width="1240" height="240" fill="none" stroke="#1E8449" stroke-width="1.5" rx="4"/>
+
+  <!-- TO-BE NODES -->
+  <!-- Start -->
+  <circle cx="200" cy="841" r="22" fill="#1E8449" stroke="white" stroke-width="3" filter="url(#shadow)"/>
+  <text x="200" y="846" text-anchor="middle" font-size="13" fill="white" font-weight="bold">▶</text>
+  <text x="200" y="878" text-anchor="middle" font-size="11" fill="#555">Opens App</text>
+  <text x="200" y="891" text-anchor="middle" font-size="11" fill="#555">near Store</text>
+
+  <!-- AI Recommends -->
+  <rect x="255" y="815" width="140" height="52" rx="8" fill="white" stroke="#7D3C98" stroke-width="2" filter="url(#shadow)"/>
+  <text x="325" y="836" text-anchor="middle" font-size="12" font-weight="bold" fill="#7D3C98">🤖 AI Suggests</text>
+  <text x="325" y="851" text-anchor="middle" font-size="12" font-weight="bold" fill="#7D3C98">Products</text>
+  <text x="325" y="866" text-anchor="middle" font-size="10" fill="#777">Based on history</text>
+
+  <!-- Customer picks products -->
+  <rect x="438" y="815" width="130" height="52" rx="8" fill="white" stroke="#1E8449" stroke-width="2" filter="url(#shadow)"/>
+  <text x="503" y="836" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">Selects</text>
+  <text x="503" y="851" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">Products</text>
+
+  <!-- QR Scan -->
+  <rect x="615" y="815" width="130" height="52" rx="8" fill="white" stroke="#1A5276" stroke-width="2" filter="url(#shadow)"/>
+  <text x="680" y="836" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A5276">📱 Scan QR</text>
+  <text x="680" y="851" text-anchor="middle" font-size="12" font-weight="bold" fill="#1A5276">at Checkout</text>
+  <text x="680" y="866" text-anchor="middle" font-size="10" fill="#777">&lt;1s, auto ID</text>
+
+  <!-- Points Awarded -->
+  <rect x="795" y="815" width="130" height="52" rx="8" fill="white" stroke="#D4AC0D" stroke-width="2" filter="url(#shadow)"/>
+  <text x="860" y="836" text-anchor="middle" font-size="12" font-weight="bold" fill="#B7950B">⭐ Points</text>
+  <text x="860" y="851" text-anchor="middle" font-size="12" font-weight="bold" fill="#B7950B">Awarded</text>
+  <text x="860" y="866" text-anchor="middle" font-size="10" fill="#777">Real-time, &lt;5s</text>
+
+  <!-- QR Payment -->
+  <rect x="978" y="815" width="130" height="52" rx="8" fill="white" stroke="#1E8449" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1043" y="836" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">💳 QR Pay</text>
+  <text x="1043" y="851" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E8449">(PayPay/Line)</text>
+  <text x="1043" y="866" text-anchor="middle" font-size="10" fill="#777">&lt;3s confirmed</text>
+
+  <!-- Personalised Offer -->
+  <rect x="1160" y="815" width="130" height="52" rx="8" fill="white" stroke="#7D3C98" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1225" y="836" text-anchor="middle" font-size="12" font-weight="bold" fill="#7D3C98">🎯 Push Offer</text>
+  <text x="1225" y="851" text-anchor="middle" font-size="12" font-weight="bold" fill="#7D3C98">Sent to App</text>
+  <text x="1225" y="866" text-anchor="middle" font-size="10" fill="#777">Personalised</text>
+
+  <!-- End: Customer Retained -->
+  <circle cx="1355" cy="841" r="22" fill="white" stroke="#1E8449" stroke-width="4" filter="url(#shadow)"/>
+  <circle cx="1355" cy="841" r="14" fill="#1E8449"/>
+  <text x="1355" y="876" text-anchor="middle" font-size="11" fill="#1E8449" font-weight="bold">Customer</text>
+  <text x="1355" y="889" text-anchor="middle" font-size="11" fill="#1E8449" font-weight="bold">Returns! ✅</text>
+
+  <!-- TO-BE ARROWS -->
+  <line x1="222" y1="841" x2="255" y2="841" stroke="#1E8449" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="395" y1="841" x2="438" y2="841" stroke="#1E8449" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="568" y1="841" x2="615" y2="841" stroke="#1E8449" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="745" y1="841" x2="795" y2="841" stroke="#1E8449" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="925" y1="841" x2="978" y2="841" stroke="#1E8449" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="1108" y1="841" x2="1160" y2="841" stroke="#1E8449" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <line x1="1290" y1="841" x2="1333" y2="841" stroke="#1E8449" stroke-width="2" marker-end="url(#arrow-green)"/>
+
+  <!-- Key improvements callout -->
+  <rect x="155" y="920" width="1090" height="40" rx="8" fill="#D5F5E3" stroke="#1E8449" stroke-width="1.5"/>
+  <text x="700" y="936" text-anchor="middle" font-size="11" fill="#1E8449" font-weight="bold">✅ Key Improvements: Checkout time ↓38%   |   Points auto-awarded &lt;5s   |   Zero paper waste   |   23+ data points captured per visit   |   Retention 34% → 62%</text>
+  <text x="700" y="952" text-anchor="middle" font-size="10" fill="#555">AI Recommendations  •  Real-time Analytics  •  APPI Compliant  •  QR Payment (PayPay / LINE Pay)  •  Gamified Loyalty Tiers</text>
+
+  <!-- LEGEND -->
+  <rect x="20" y="965" width="1360" height="14" fill="#8B0000" rx="4"/>
+  <text x="700" y="975" text-anchor="middle" font-size="10" fill="white">🌸 SakuraMart DLP — BPMN 2.0  |  Prepared by: Business Analysis Team  |  Project: SMC-DLP-2026  |  Date: 22 Feb 2026  |  Version: 1.0</text>
+</svg>
