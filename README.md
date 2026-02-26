@@ -1,6 +1,3 @@
-# sakuramart-ba-case-study
-End-to-end Business Analysis project including BRD, BPMN, and analytics
-
 # 🌸 SakuraMart Business Analysis Case Study
 
 ## 📌 Overview
