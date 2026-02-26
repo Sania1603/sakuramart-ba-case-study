@@ -27,10 +27,8 @@ Detailed Business Requirements Document covering:
 ## 📊 Analytics Preview
 
 ### 💰 Cost-Benefit Analysis
-![Cost1](<img width="1409" height="499" alt="cost_benefit_1 png" src="https://github.com/user-attachments/assets/792c84b3-66b3-4fd3-b44d-6d556c752ab5" />
-)
-![Cost2](<img width="1315" height="656" alt="cost_benefit_2 png" src="https://github.com/user-attachments/assets/d64426d0-c383-4e51-a6f0-ae52d7437327" />
-)
+![Cost1](cost_benefit_1.png)
+![Cost2](cost_benefit_2.png)
 
 ### 🎯 MoSCoW Dashboard
 ![MoSCoW1](moscow_dashboard_1.png)
