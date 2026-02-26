@@ -24,6 +24,19 @@ Detailed Business Requirements Document covering:
 - MoSCoW prioritization
 - User stories & acceptance criteria
 
+## 📊 Analytics Preview
+
+### 💰 Cost-Benefit Analysis
+![Cost1](cost_benefit_1.png)
+![Cost2](cost_benefit_2.png)
+
+### 🎯 MoSCoW Dashboard
+![MoSCoW1](moscow_dashboard_1.png)
+![MoSCoW2](moscow_dashboard_2.png)
+
+### ⚙️ JIRA Backlog
+![JIRA](jira_backlog.png)
+
 ### 🗺️ BPMN Diagram
 - As-Is vs To-Be process mapping
 - Identified inefficiencies and optimized flow
