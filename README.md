@@ -51,3 +51,6 @@ SQL, Data Analysis, BPMN, BRD, Agile, MoSCoW, Stakeholder Analysis
 
 ## 🔗 Author
 Sania Sultana
+ECBA Certifies Business Analyst
+💼 LinkedIn: https:https://www.linkedin.com/in/saniasultana16
+📧 Open to internship & entry-level opportunities
